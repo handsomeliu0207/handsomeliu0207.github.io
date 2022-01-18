@@ -1,0 +1,7 @@
+/* 鼠标样式 */
+* {
+  cursor: url("/images/default.cur"), auto;
+}
+:link {
+  cursor: url("/images/pointer.cur"), auto;
+}
