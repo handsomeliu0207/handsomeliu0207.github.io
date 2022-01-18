@@ -1797,7 +1797,7 @@ pre code {
     top: -900px;
     bottom: unset;
     transition: all 0.5s ease-in-out;
-    background: url("themes/next/source/images/scroll.png");
+    background: url("/images/scroll.png");
     position: fixed;
   }
   .back-to-top > i {
