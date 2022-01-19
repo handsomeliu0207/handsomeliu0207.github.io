@@ -29,12 +29,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1 构造函数和析构函数基本概念和语法对象的初始化和清理也是两个非常重要的安全问题 ​    一个对象或者变量没有初始状态，对其使用后果是未知 ​    同样的使用完一个对象或变量，没有及时清理，也会造成一定的安全问题 c++利用了构造函数和析构函数解决上述问题，这两个函数将会被编译器自动调用，完成对象初始化和清理工作。 对象的初始化和清理工作是编译器强制要我们做的事情，因此如果我们不提供构造和析构">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2022/01/19/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%5C1642565030463.png">
+<meta property="og:image" content="http://example.com/2022/01/19/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%5C123.png">
 <meta property="article:published_time" content="2022-01-19T02:13:33.000Z">
-<meta property="article:modified_time" content="2022-01-19T15:17:39.071Z">
+<meta property="article:modified_time" content="2022-01-19T15:29:31.609Z">
 <meta property="article:author" content="小刘很0k">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2022/01/19/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%5C1642565030463.png">
+<meta name="twitter:image" content="http://example.com/2022/01/19/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%5C123.png">
 
 
 <link rel="canonical" href="http://example.com/2022/01/19/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/">
@@ -203,7 +203,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-01-19 10:13:33 / 修改时间：23:17:39" itemprop="dateCreated datePublished" datetime="2022-01-19T10:13:33+08:00">2022-01-19</time>
+      <time title="创建时间：2022-01-19 10:13:33 / 修改时间：23:29:31" itemprop="dateCreated datePublished" datetime="2022-01-19T10:13:33+08:00">2022-01-19</time>
     </span>
 
   
@@ -248,6 +248,8 @@
 <li>构造函数：主要作用在于创建对象时为对象的成员属性赋值，构造函数由编译器自动调用，无须手动调用。</li>
 <li>析构函数：主要作用在于对象<strong>销毁前</strong>系统自动调用，执行一些清理工作。</li>
 </ul>
+ <span id="more"></span> 
+
 <p><strong>构造函数语法：</strong><code>类名()&#123;&#125;</code></p>
 <ol>
 <li>构造函数，没有返回值也不写void</li>
@@ -297,7 +299,7 @@
 <li>值传递的方式给函数参数传值</li>
 <li>以值方式返回局部对象</li>
 </ul>
-<p><img src="/2022/01/19/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%5C1642565030463.png" alt="1642565030463"></p>
+<p><img src="/2022/01/19/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%5C123.png" alt="1642565030463"></p>
 <h2 id="4-构造函数调用原则"><a href="#4-构造函数调用原则" class="headerlink" title="4 构造函数调用原则"></a>4 构造函数调用原则</h2><p>默认情况下，c++编译器至少给一个类添加3个函数</p>
 <p>1．默认构造函数(无参，函数体为空)</p>
 <p>2．默认析构函数(无参，函数体为空)</p>
@@ -317,7 +319,7 @@
 
 
 
-<h2 id="6-初始化列表"><a href="#6-初始化列表" class="headerlink" title="6 初始化列表"></a>6 初始化列表</h2><p>作用：**</p>
+<h2 id="6-初始化列表"><a href="#6-初始化列表" class="headerlink" title="6 初始化列表"></a>6 初始化列表</h2><p><strong>作用：</strong></p>
 <p>C++提供了初始化列表语法，用来初始化属性</p>
 <p><strong>语法：</strong><code>构造函数()：属性1(值1),属性2（值2）... &#123;&#125;</code></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化列表</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//传统初始化操作</span></span><br><span class="line">	<span class="comment">/*Person(int a, int b, int c)</span></span><br><span class="line"><span class="comment">	&#123;</span></span><br><span class="line"><span class="comment">		m_A = a;</span></span><br><span class="line"><span class="comment">		m_B = b;</span></span><br><span class="line"><span class="comment">		m_C = c;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	&#125;*/</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//初始化列表 初始化属性</span></span><br><span class="line">	<span class="built_in">Person</span>(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c) :<span class="built_in">m_A</span>(a), <span class="built_in">m_B</span>(b), <span class="built_in">m_C</span>(c)</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> m_A;</span><br><span class="line">	<span class="keyword">int</span> m_B;</span><br><span class="line">	<span class="keyword">int</span> m_C;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//Person p(10, 20, 30);</span></span><br><span class="line"></span><br><span class="line">	<span class="function">Person <span class="title">p</span><span class="params">(<span class="number">30</span>,<span class="number">20</span>,<span class="number">10</span>)</span></span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;m_A = &quot;</span> &lt;&lt; p.m_A &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;m_B = &quot;</span> &lt;&lt; p.m_B &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;m_C = &quot;</span> &lt;&lt; p.m_C &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">test01</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
